@@ -1,13 +1,20 @@
-public class Hello
-{
-	public static void main(String[] args) {
-	    int i,j;
-	    for(i=1;i<=10;i++){
-	        System.out.println("\n");
-	        for(j=1;j<=10;j++){
-	            System.out.print(i + "x" + j + "=" + i*j + " ");
-	        }
-	    }
-	
+import java.lang.*;
+import java.util.*;
+
+public class Prac{
+
+	static void Bi(String x){
+	String s = x;
+	int res = 0,po = 0;
+	for(int i = s.length()-1;i>=0;i--){
+	res += Character.getNumericValue(s.charAt(i)) * Math.pow(2,po);
+	po++;
+	}
+	System.out.println("Binary Number: " + res);
+	}
+
+	public static void main(String args[]){
+	String s = "1000";
+	Bi(s);
 	}
 }
